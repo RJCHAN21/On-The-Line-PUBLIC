@@ -1,64 +1,93 @@
 # On The Line
 
-**On The Line** is an in-development pressure-management game about working as a support agent at a modern internet service provider. Set inside a fast-moving call center workflow, the game challenges players to juggle incoming calls, respond under pressure, and solve network-related service problems before situations spiral out of control.
-
-At its core, the game blends **queue management**, **rapid dialogue decisions**, and **technical problem-solving** into a single shift-based experience. Players must decide which calls to take, navigate short customer interactions, and complete issue-resolution sequences tied to network guidance and signal restoration. Every decision affects performance, response time, and the ability to stay ahead of an escalating workload.
-
-The project is built around the idea of turning customer support pressure into readable, gameable systems. Rather than focusing on combat or traditional action mechanics, *On The Line* creates tension through rising urgency, limited time, and the constant risk of falling behind. A full shift becomes a test of prioritization, consistency, and efficiency.
+**On The Line** is a Unity prototype about surviving the pressure of a modern ISP call center. Players work through a live queue of support calls, triage customer issues, make fast dialogue decisions, and complete troubleshooting minigames under a ticking shift timer. The challenge is not combat, but control: staying efficient, protecting KPI, and meeting quota before the workday collapses.
 
 ## Project Status
 
-This project is currently in development. Systems, balancing, and presentation are still being refined.
+**Current state:** Playable prototype
+
+The current build already supports the core gameplay loop, including:
+
+- Real-time call queue management
+- Call aging and urgency escalation
+- Dialogue-driven issue triage
+- Troubleshooting minigames
+- KPI and quota-based performance tracking
+- Shift progression, failure states, and next-day flow
+
+Presentation, narrative polish, long-term progression, and some content layers are still in progress.
 
 ## Core Premise
 
-You play as an ISP support agent trying to survive a full work shift while maintaining performance targets. Calls continue to arrive throughout the day, each with its own urgency and service issue. If too many calls are ignored, mishandled, or resolved too slowly, overall performance drops and the shift becomes harder to recover.
+You play as an ISP support agent trying to survive a full shift without being overwhelmed by incoming requests. Every call adds pressure to the queue, and every second spent on one customer affects the rest. To succeed, you need to balance urgency, response quality, and speed while keeping performance above the threshold for termination.
 
-## Core Gameplay Pillars
+## Core Gameplay Loop
 
-### 1. Queue Pressure
-Incoming calls escalate over time. Players must decide what to handle first and prevent high-priority calls from being neglected.
+A typical session flows like this:
 
-### 2. Customer Interaction
-Each selected call begins with a short dialogue phase where players choose quick responses to identify the issue efficiently.
+1. New customer calls enter the queue over time.
+2. Waiting calls become more urgent the longer they are ignored.
+3. You choose which call to answer next.
+4. A short dialogue phase helps identify the issue and shape customer satisfaction.
+5. The call moves into a troubleshooting minigame tied to the customer’s problem.
+6. Your performance updates based on speed, mistakes, and overall call quality.
+7. The shift continues until the day ends, you meet quota, or your KPI collapses.
 
-### 3. Technical Resolution
-After identifying the problem, players complete one of the game’s service-repair activities, such as guiding a connection route or restoring a signal path.
+## Core Systems
 
-### 4. Performance Management
-The game tracks handling speed, dropped calls, and shift progress. Success depends on maintaining control under pressure rather than solving only one problem at a time.
+### Live Queue Pressure
 
-## Current Gameplay Structure
+Calls are not static tasks. They age in real time, escalate in urgency, and can eventually drop entirely if left unresolved for too long. This creates constant pressure to prioritize the right problem at the right time instead of simply clearing one call after another.
 
-A typical play loop looks like this:
+### Dialogue Triage
 
-1. New calls enter the queue.
-2. Existing calls escalate if left waiting.
-3. The player selects a call to answer.
-4. A short customer interaction phase plays out.
-5. The player resolves the associated service issue.
-6. Performance updates and the player returns to the queue.
-7. The shift continues until the workday ends.
+Each call begins with a short conversational phase where the player quickly identifies the issue and manages the interaction. Dialogue choices influence call quality, shaping how smoothly the customer reaches resolution.
 
-## Systems Featured in the Design
+### Troubleshooting Minigames
 
-- Escalating call queue states
-- Fast-paced call introduction dialogue
-- Multiple issue-resolution minigame types
-- Per-call handling timer with pressure states
-- Shift-length session structure
-- Quota and KPI-style performance tracking
-- Risk-reward decision-making around continuing past quota
+Resolved calls are not handled through menus alone. The prototype currently supports multiple troubleshooting activities, including signal-routing and network-guidance style puzzles, turning service work into active problem-solving rather than passive clicking.
 
-## Design Goals
+### KPI and Quota Management
 
-The project aims to:
+Performance is measured through a 5.0-based per-call score, overall KPI pressure, and a daily quota target. Mistakes, delays, dropped calls, and poor call handling all make recovery harder, while strong performance helps stabilize the shift.
 
-- Translate the stress of real-time support work into interactive gameplay
-- Make pressure and prioritization the main source of challenge
-- Combine decision-making and puzzle-solving in a readable loop
-- Build tension through workload escalation instead of combat
+### Day Escalation
 
-## Notes
+As days progress, the game increases pressure through harsher requirements and tougher failure conditions. Spawn pacing, quota demands, and penalties ramp up to make later shifts feel more demanding than the first.
 
-This README is currently written as a public-facing overview. It intentionally stays high level and avoids implementation-specific details that should be filled in later from the live project codebase.
+## What Makes the Game Distinct
+
+**On The Line** translates workplace pressure into game systems. Its tension comes from queue escalation, decision-making, and time-sensitive troubleshooting rather than traditional combat or action mechanics. The result is a systems-driven experience built around urgency, consistency, and the feeling of trying to stay afloat during an overloaded shift.
+
+## Current Features in the Prototype
+
+- Shift-based gameplay structure
+- Escalating incoming call queue
+- Priority and aging states for unattended calls
+- Dialogue choices that affect call outcome
+- Multiple troubleshooting puzzle types
+- Per-call score decay and mistake penalties
+- KPI-based fail states
+- End-of-day summary and next-day progression
+- Game-over summary flow
+- Pause and desktop-style UI navigation
+
+## Controls
+
+- **Mouse:** Answer calls, navigate UI, select dialogue, and interact with puzzle elements
+- **Keyboard:** `Escape` toggles the in-game pause/app-close state
+
+## Technical Snapshot
+
+- Built in **Unity**
+- Uses a pooled call-spawning system for incoming requests
+- Driven by customer and issue data assets
+- Designed as a prototype with gameplay systems already wired before final presentation polish
+
+## Scope Notes
+
+This README reflects the project’s current playable prototype state. It focuses on gameplay that is already supported by the existing implementation and avoids presenting unfinished content as complete. Narrative depth, art/audio orchestration, and longer-term campaign structure are still evolving.
+
+---
+
+This version of the README is based on the repo-grounded implementation summary provided from the current project audit, with public-facing wording layered on top for clarity and presentation.
