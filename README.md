@@ -76,4 +76,31 @@ The finished playable build includes:
 
 **On The Line** explores a setting that games rarely center: the stress of customer support as the source of challenge. By turning queue pressure, troubleshooting, and performance management into gameplay, it creates a distinct form of tension built on mental load instead of physical action.
 
+## Credits
+
+### Developers
+- Carlo Arañez
+- Reginald Jervaise Chan
+- Orlie Vincent Gendraule
+- Xaviery Bonson Padaoan
+
+### Minigames
+- Orlie Vincent Gendraule
+
+### Music & SFX
+- Reginald Jervaise Chan
+
+### Art Designer
+- Carlos Alberto
+- Xaviery Bonson Padaoan
+
+### Fonts
+- Tiny Worlds – Thaleah
+- Nytrock – GNF
+
+### Plugins
+- Okitoki Games – EasyTalk Dialogue System
+- The Naughty Cult – Hot Reload
+- More Mountains – Feel
+
 ---
